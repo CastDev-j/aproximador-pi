@@ -136,7 +136,7 @@ const Counter = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 min-h-screen w-full">
+    <div className="grid grid-cols-1 gap-6 min-h-screen w-full p-4 lg:p-8">
       <div className="p-6 bg-white shadow-lg rounded-lg space-y-4">
         <div className="text-center space-y-4">
           <label
