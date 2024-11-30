@@ -1,0 +1,73 @@
+<footer class="bg-white p-6 rounded-lg shadow-lg w-full text-gray-800">
+
+    <div class="flex flex-col justify-center items-center gap-6">
+
+        <div class="text-center md:text-left">
+            <h2 class="text-2xl font-bold text-gray-600 mb-2">
+                Aproximador de Pi - Método de Larson
+            </h2>
+            <p class="text-sm text-gray-700">
+                Calculadora de la aproximación de Pi utilizando el método de Larson
+                basado en una serie "infinita".
+            </p>
+        </div>
+
+        <nav class="flex space-x-4 text-sm text-gray-700">
+            <a href="https://github.com/CastDev-j" class="hover:underline">Acerca de</a>
+            <a href="https://castdev-j.netlify.app/" class="hover:underline">Mi Portafolio</a>
+            <a href="mailto:andres2004_cj@outlook.com" class="hover:underline">Contacto</a>
+        </nav>
+    </div>
+
+    <hr class="border-t border-gray-300 my-6" />
+
+    <div class="text-center text-sm text-gray-600">
+        <p class="font-medium">Integrantes:</p>
+        <ul class="list-disc list-inside">
+            <li>Andrés Castillo Jiménez</li>
+            <li>Vazquez Guzman Sergio Guadalupe</li>
+            <li>Joshua Mendoza Teniente</li>
+            <li>Jorge Adrian Colorado</li>
+        </ul>
+    </div>
+
+    <hr class="border-t border-gray-300 my-6" />
+
+    <div class="flex justify-center">
+        <div class="flex items-center space-x-4">
+            <span class="block w-6 h-6 bg-green-400 rounded-full animate-pulse" aria-hidden="true"></span>
+            <p class="text-gray-700 font-medium texto-gen" aria-live="polite"></p>
+        </div>
+    </div>
+    <script>
+    const statusText = document.querySelector(".texto-gen") as HTMLElement;
+    const phrases = ["Todo Funcionando", "Calculando Pi...", "Método de Larson", "Aproximación en curso"];
+    let index = 0;
+    let isDeleting = false;
+    let phraseIndex = 0;
+
+    function typeEffect() {
+        const currentPhrase = phrases[phraseIndex];
+        if (!isDeleting && index < currentPhrase.length) {
+            statusText.textContent = currentPhrase.substring(0, index + 1) + "|";
+            index++;
+            setTimeout(typeEffect, 100);
+        } else if (isDeleting && index > 0) {
+            statusText.textContent = currentPhrase.substring(0, index - 1) + "|";
+            index--;
+            setTimeout(typeEffect, 100);
+        } else {
+            isDeleting = !isDeleting;
+            if (!isDeleting) {
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+            }
+            setTimeout(typeEffect, 1000);
+        }
+    }
+
+    typeEffect();
+
+    </script>
+</footer>
+
+

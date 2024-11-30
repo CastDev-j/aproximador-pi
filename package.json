@@ -9,8 +9,22 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.16",
     "@astrojs/check": "^0.9.4",
-    "typescript": "^5.7.2"
+    "@astrojs/react": "^3.6.3",
+    "@astrojs/tailwind": "^5.1.2",
+    "@types/animejs": "^3.1.12",
+    "animejs": "^3.2.2",
+    "aproximador-pi": "file:",
+    "astro": "^4.16.16",
+    "chart.js": "^4.4.6",
+    "decimal.js": "^10.4.3",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.3.1",
+    "sass": "^1.81.0",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.7.2",
+    "vite-plugin-pwa": "^0.21.1",
+    "zustand": "^5.0.1"
   }
 }
